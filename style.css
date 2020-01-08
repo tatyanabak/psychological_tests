@@ -1,0 +1,60 @@
+.visually-hidden {
+	position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    white-space: nowrap;
+    border: 0;
+    clip-path: inset(100%);
+}
+
+.form {
+	border: 1px solid black;
+}
+
+.form__questions {
+	list-style: none;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 0;
+}
+
+.form__question-wrapper {
+	display: flex;
+
+	border-bottom: 1px solid black;
+}
+
+.form__question {
+	width: 55%;
+	min-width: 450px;
+}
+
+.form__answers {
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 0;
+
+	display: flex;
+	width: 45%;
+	min-width: 600px;
+
+	list-style: none;
+}
+
+.form__answer {
+	display: flex;
+}
+
+.radiobutton-label {
+	border-left: 1px solid black;
+	text-align: center;
+	align-content: center;
+}
+
+input[type=radio]:checked+.radiobutton-label {
+	background-color: #9FEF65;
+}
