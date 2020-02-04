@@ -13,6 +13,7 @@
 
 .form {
 	border: 1px solid black;
+	min-width: 1200px;
 }
 
 .form__questions {
@@ -57,4 +58,42 @@
 
 input[type=radio]:checked+.radiobutton-label {
 	background-color: #9FEF65;
+}
+
+.popup {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 10%;
+	width: 80%;
+	min-width: 900px;
+	height: 100%;
+	border: 1px solid black;
+	background-color: white;
+}
+
+.popup__title {
+	text-align: center;
+}
+
+.popup__table {
+	width: 70%;
+	min-width: 800px;
+	margin: 0 auto;
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+.popup__table th:nth-child(2) {
+	min-width: 330px;
+}
+
+.popup__table td {
+	border: 1px solid black;
+}
+
+.popup__close {
+	position: absolute;
+	top: 0;
+	right: 0;
 }

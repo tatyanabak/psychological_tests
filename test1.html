@@ -6,11 +6,26 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <script src="test1-materials.js"></script>
     <script src="test1.js"></script>
     <h1>Диагностика ранних дезадаптивных схем</h1>
     <form class="form">
         <ol class="form__questions"></ol>
         <button class="form__submit" type="submit">Готово. Завершить тест</button>
     </form>
+    <div class="popup">
+        <h1 class="popup__title">Результаты</h1>
+        <table class="popup__table">
+            <tr>
+                <th>№</th>
+                <th>Схема</th>
+                <th>Sum</th>
+                <th>Sum1</th>
+                <th>Sum2</th>
+                <th>Sum3</th>
+            </tr>
+        </table>
+        <button class="popup__close">Закрыть</button>
+    </div>
 </body>
 </html>
