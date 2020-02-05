@@ -77,11 +77,15 @@ input[type=radio]:checked+.radiobutton-label {
 }
 
 .popup__table {
-	width: 70%;
+	width: 80%;
 	min-width: 800px;
 	margin: 0 auto;
 	border: 1px solid black;
 	border-collapse: collapse;
+}
+
+.popup__table th {
+	border: 1px solid black;
 }
 
 .popup__table th:nth-child(2) {
