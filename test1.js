@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		let newQuestion = document.createElement('li');
 
 		newQuestion.setAttribute('class','form__question-wrapper');
-		newQuestion.innerHTML = `<p class="form__question">${number}. ${text}</p>`;
+		newQuestion.innerHTML = `<p class="form__question">${number + 1}. ${text}</p>`;
 		newQuestion.append(newAnswersList);
 		questionList.append(newQuestion);
 	};
@@ -44,7 +44,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (e.target.tagName.toLowerCase() == 'input'.toLowerCase()) {
             answerNameArray = e.target.id.split('-');
             answerNumber = +answerNameArray[1];
-            results[answerNumber] = e.target.value;
+			tempAnswerValue = e.target.value
+            results[answerNumber] = +tempAnswerValue + 1;
             console.log(results);
         }
         return results['answerNumber'];
@@ -75,20 +76,26 @@ document.addEventListener('DOMContentLoaded', () => {
 	/* считаем суммы, получаем конечные результаты теста */
     function calcResult () {
         for (let i = 0; i < scheme.length; i++ ) {
-			/*
+
             scheme[i].sum1 = 0;
             scheme[i]['answers'].forEach(function(item) {
                 if (item === undefined) {item = 0};
                 scheme[i].sum1 += +item;
             });
 
-
             scheme[i].sum2 = (scheme[i].sum1 - 5) / 25 * 100;
-			*/
-			scheme[i].sum1 = 'сумма всех баллов';
-			scheme[i].sum2 = 'выраженность схемы в %';
-			scheme[i].sum3 = 'сумма всех 5 и 6';
-			scheme[i].sum4 = 'доля 5 и 6 в %';
+
+			let sum56 = 0;
+			let num56 = 0;
+			for (let y = 0; y <= scheme[i]['answers'].length; y++) {
+				if (scheme[i]['answers'][y] >= 5) {
+					sum56 += scheme[i]['answers'][y];
+					num56 += 1;
+				};
+			};
+
+			scheme[i].sum3 = sum56;
+			scheme[i].sum4 = num56 / 5 * 100;
         }
     }
 
@@ -105,6 +112,8 @@ document.addEventListener('DOMContentLoaded', () => {
 			popupNewRow.innerHTML = `
 				<td>${i+1}</td>
 				<td>${scheme[i]['name']}</td>
+				<td>${scheme[i]['showNumberQuestion']}</td>
+				<td>${scheme[i]['answers']}</td>
 				<td>${scheme[i]['sum1']}</td>
 				<td>${scheme[i]['sum2']}</td>
 				<td>${scheme[i]['sum3']}</td>
@@ -113,6 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			popupTable.append(popupNewRow);
 		};
 
+		console.log('scheme', scheme);
 		btnClose.addEventListener('click', popupClose, false);
 	}
 
@@ -122,5 +132,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	function popupClose () {
 		popup.style.display = "none";
+		location.reload();
 	}
 });

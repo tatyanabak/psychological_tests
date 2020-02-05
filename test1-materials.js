@@ -105,91 +105,109 @@ let results = [];
 let scheme = [
 	{
 		name: 'Эмоциональная депривированность',
-		numberQuestion: [0, 18, 36, 54, 72]
+		numberQuestion: [0, 18, 36, 54, 72],
+		showNumberQuestion: [1, 19, 37, 55, 73]
 	},
 
 	{
 		name: 'Покинутость / нестабильность',
-		numberQuestion: [1, 19, 37, 55, 73]
+		numberQuestion: [1, 19, 37, 55, 73],
+		showNumberQuestion: [2, 20, 38, 56, 74]
 	},
 
 	{
 		name: 'Недоверие / Ожидание жесткого обращения',
-		numberQuestion: [2, 20, 38, 56, 74]
+		numberQuestion: [2, 20, 38, 56, 74],
+		showNumberQuestion: [3, 21, 39, 57, 75]
 	},
 
 	{
 		name: 'Социальная отчужденность',
-		numberQuestion: [3, 21, 39, 57, 75]
+		numberQuestion: [3, 21, 39, 57, 75],
+		showNumberQuestion: [4, 22, 40, 58, 76]
 	},
 
 	{
 		name: 'Дефективность / стыдливость',
-		numberQuestion: [4, 22, 40, 58, 76]
+		numberQuestion: [4, 22, 40, 58, 76],
+		showNumberQuestion: [5, 23, 41, 59, 77]
 	},
 
 	{
 		name: 'Неуспешность',
-		numberQuestion: [5, 23, 41, 59, 77]
+		numberQuestion: [5, 23, 41, 59, 77],
+		showNumberQuestion: [6, 24, 42, 60, 78]
 	},
 
 	{
 		name: 'Зависимость / беспомощность',
-		numberQuestion: [6, 24, 42, 60, 78]
+		numberQuestion: [6, 24, 42, 60, 78],
+		showNumberQuestion: [7, 25, 43, 61, 79]
 	},
 
 	{
 		name: 'Уязвимость',
-		numberQuestion: [7, 25, 43, 61, 79]
+		numberQuestion: [7, 25, 43, 61, 79],
+		showNumberQuestion: [8, 26, 44, 62, 80]
 	},
 
 	{
 		name: 'Запутанность / неразвитая идентичность',
-		numberQuestion: [8, 26, 44, 62, 80]
+		numberQuestion: [8, 26, 44, 62, 80],
+		showNumberQuestion: [9, 27, 45, 63, 81]
 	},
 
 	{
 		name: 'Покорность',
-		numberQuestion: [9, 27, 45, 63, 81]
+		numberQuestion: [9, 27, 45, 63, 81],
+		showNumberQuestion: [10, 28, 46, 64, 82]
 	},
 
 	{
 		name: 'Самопожертвование',
-		numberQuestion: [10, 28, 46, 64, 82]
+		numberQuestion: [10, 28, 46, 64, 82],
+		showNumberQuestion: [11, 29, 47, 65, 83]
 	},
 
 	{
 		name: 'Подавленность эмоций',
-		numberQuestion: [11, 29, 47, 65, 83]
+		numberQuestion: [11, 29, 47, 65, 83],
+		showNumberQuestion: [12, 30, 48, 66, 84]
 	},
 
 	{
 		name: 'Жёсткие стандарты, Придирчивость',
-		numberQuestion: [12, 30, 48, 66, 84]
+		numberQuestion: [12, 30, 48, 66, 84],
+		showNumberQuestion: [13, 31, 49, 67, 85]
 	},
 
 	{
 		name: 'Привилегированность / Грандиозность',
-		numberQuestion: [13, 31, 49, 67, 85]
+		numberQuestion: [13, 31, 49, 67, 85],
+		showNumberQuestion: [14, 32, 50, 68, 86]
 	},
 
 	{
 		name: 'Недостаточность самоконтроля',
-		numberQuestion: [14, 32, 50, 68, 86]
+		numberQuestion: [14, 32, 50, 68, 86],
+		showNumberQuestion: [15, 33, 51, 69, 87]
 	},
 
 	{
 		name: 'Поиск одобрения',
-		numberQuestion: [15, 33, 51, 69, 87]
+		numberQuestion: [15, 33, 51, 69, 87],
+		showNumberQuestion: [16, 34, 52, 70, 88]
 	},
 
 	{
 		name: 'Негативизм / Пессимизм',
-		numberQuestion: [16, 34, 52, 70, 88]
+		numberQuestion: [16, 34, 52, 70, 88],
+		showNumberQuestion: [17, 35, 53, 71, 89]
 	},
 
 	{
 		name: 'Пунитивность',
-		numberQuestion: [17, 35, 53, 71, 89]
+		numberQuestion: [17, 35, 53, 71, 89],
+		showNumberQuestion: [18, 36, 54, 72, 90]
 	}
 ];
